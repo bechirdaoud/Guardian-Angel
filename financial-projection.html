@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Financial Projection | Guardian Angel</title>
+  <meta name="description" content="Financial projection framework for a shared ownership programme (5 owners): acquisition, running costs, capex and reserves." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/mark.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Guardian Angel home">
+        <span class="brand-mark" aria-hidden="true">⟡</span>
+        <span class="brand-name">Guardian Angel</span>
+        <span class="brand-sub">Oyster 885</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Open menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="around-the-world.html">Around the World</a>
+        <a class="nav-link active" href="financial-projection.html">Financial Projection</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-slim">
+      <div class="container">
+        <p class="eyebrow">Shared programme framework</p>
+        <h1>Financial Projection</h1>
+        <p class="lead">
+          A clean structure you can populate later with your real numbers:
+          acquisition, annual running costs, refit cycles, reserves, and owner participation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h2 class="card-title">Assumptions (edit later)</h2>
+          <ul class="small">
+            <li><strong>Owners:</strong> 5</li>
+            <li><strong>Use:</strong> Private programme (not chartered)</li>
+            <li><strong>Quality target:</strong> immaculate condition year‑round</li>
+            <li><strong>Routing:</strong> aligned with 7‑year itinerary</li>
+          </ul>
+
+          <div class="note">
+            <strong>Next step:</strong> Add a detailed cost model (crew, insurance, berthage, maintenance,
+            fuel, flights, compliance, communications, spares, capex).
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Quick split calculator</h2>
+          <p class="muted small">
+            This helps you sanity‑check how an annual budget looks per owner before building the full model.
+          </p>
+
+          <form class="calc" id="calc">
+            <label>
+              Annual operating budget (EUR)
+              <input type="number" inputmode="numeric" id="budget" placeholder="e.g. 750000" />
+            </label>
+            <label>
+              Number of owners
+              <input type="number" inputmode="numeric" id="owners" value="5" />
+            </label>
+            <label>
+              Annual reserve (EUR)
+              <input type="number" inputmode="numeric" id="reserve" placeholder="e.g. 150000" />
+            </label>
+
+            <button class="btn" type="submit">Calculate</button>
+
+            <div class="calc-out" aria-live="polite">
+              <div class="spec"><span>Budget per owner</span><span id="out-per">—</span></div>
+              <div class="spec"><span>Budget + reserve per owner</span><span id="out-per2">—</span></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Model outline</h2>
+          <p class="muted">Suggested sections to build a proper investor-grade projection.</p>
+        </div>
+
+        <div class="outline">
+          <div class="outline-item">
+            <h3>1) Acquisition</h3>
+            <ul class="small">
+              <li>Purchase price, taxes/fees, broker fees</li>
+              <li>Survey + immediate rectification budget</li>
+              <li>Initial safety kit + spares + upgrades</li>
+            </ul>
+          </div>
+          <div class="outline-item">
+            <h3>2) Annual operating costs</h3>
+            <ul class="small">
+              <li>Crew payroll + rotation + travel</li>
+              <li>Insurance (hull, P&amp;I), compliance</li>
+              <li>Maintenance &amp; consumables</li>
+              <li>Berthing / marina / yard</li>
+              <li>Fuel, water, communications</li>
+            </ul>
+          </div>
+          <div class="outline-item">
+            <h3>3) Capex &amp; refit cycles</h3>
+            <ul class="small">
+              <li>Rigging cycles, sails, engine major service</li>
+              <li>Electronics refresh, batteries, generator</li>
+              <li>Paint, teak, interior</li>
+            </ul>
+          </div>
+          <div class="outline-item">
+            <h3>4) Governance &amp; owner programme</h3>
+            <ul class="small">
+              <li>Usage calendar: weeks per owner, guest rules</li>
+              <li>Decision-making: capex thresholds, voting</li>
+              <li>Exit / buy-sell clauses, valuation mechanism</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <h3>Placeholder table (fill later)</h3>
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Annual (EUR)</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Crew</td><td>—</td><td>Captain + crew structure</td></tr>
+              <tr><td>Insurance</td><td>—</td><td>Hull + liability</td></tr>
+              <tr><td>Maintenance</td><td>—</td><td>Parts + yard time</td></tr>
+              <tr><td>Berthing &amp; storage</td><td>—</td><td>By region</td></tr>
+              <tr><td>Fuel &amp; logistics</td><td>—</td><td>Passage dependent</td></tr>
+              <tr><td>Reserve (capex)</td><td>—</td><td>Long-term upkeep</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>—</strong></td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="note">
+          <strong>When you’re ready:</strong> I can turn this into a proper model page with charts,
+          scenario toggles (bear/base/bull), and downloadable PDFs.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="small muted">© <span id="year"></span> Guardian Angel. All rights reserved.</p>
+      <p class="small muted">Financial content is a draft framework until real numbers are added.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
