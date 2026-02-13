@@ -2,145 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Financial Projection | Guardian Angel</title>
-  <meta name="description" content="Financial projection framework for a shared ownership programme (5 owners): acquisition, running costs and reserves." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="assets/mark.svg" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guardian Angel — Oyster 885</title>
+  <meta name="description" content="Guardian Angel — Oyster 885. A private around-the-world project and shared ownership concept." />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <div class="notice">
-    <div class="container">
-      <span>Working model • add your real numbers later</span>
-      <span><a href="index.html">Back to yacht</a></span>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Guardian Angel" onerror="this.style.display='none'">
+      <span class="tag">Oyster 885</span>
+    </a>
+    <nav class="menu">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="yacht.html">Yacht</a>
+      <a data-nav href="itinerary.html">Itinerary</a>
+      <a data-nav href="ownership.html">Ownership</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="media" style="background-image:url('https://www.devalk.nl/images/thumbnails/website/oyster-885-806067_6363f1855737fe.jpg');"></div>
+  <div class="container inner">
+    <div class="kicker">Project preview</div>
+    <h1 class="h1">Guardian Angel</h1>
+    <p class="lede">
+      A private Oyster 885 platform designed for long-range comfort — built around a simple idea:
+      spend seven years moving season-by-season through the world’s best sailing grounds.
+    </p>
+    <div class="hero-cta">
+      <a class="btn primary" href="yacht.html">Explore the yacht</a>
+      <a class="btn" href="itinerary.html">View the 7-year route</a>
+    </div>
+    <div style="margin-top:18px">
+      <span class="badge">Airy • Minimal • Temporary</span>
     </div>
   </div>
+</section>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Guardian Angel home">
-        <span class="brand-name">Guardian Angel</span>
-        <span class="brand-sub">Oyster 885</span>
-      </a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-        <span class="sr-only">Open menu</span>
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-
-      <nav id="primary-nav" class="nav" aria-label="Primary">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="around-the-world.html">Around the World</a>
-        <a class="nav-link active" href="financial-projection.html">Financial Projection</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero hero-slim" aria-label="Financial hero">
-      <div class="hero-media" aria-hidden="true">
-        <img
-          src="assets/finance-hero.jpg"
-          alt=""
-          loading="eager"
-          onerror="this.onerror=null;this.src='assets/placeholder-hero.svg';"
-        />
-      </div>
-
-      <div class="container hero-content">
-        <p class="eyebrow">Shared programme framework</p>
-        <h1>Financial Projection</h1>
-        <p class="lead">
-          A simple structure you can populate with your real numbers: acquisition, annual operating costs,
-          refit cycles, reserves, and owner participation for a five‑owner programme.
+<section class="section">
+  <div class="container grid">
+    <div class="card">
+      <div class="pad">
+        <div class="h3">The mission</div>
+        <div class="h2">Around the world, one season at a time</div>
+        <p class="p">
+          The route is built around weather windows and the “best months” in each region —
+          mixing iconic destinations with space for remote exploration.
         </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split">
-        <div class="surface">
-          <h3>Assumptions (edit later)</h3>
-          <div class="specs">
-            <div class="spec"><span>Owners</span><span>5</span></div>
-            <div class="spec"><span>Use</span><span>Private (not chartered)</span></div>
-            <div class="spec"><span>Quality target</span><span>Immaculate year‑round</span></div>
-            <div class="spec"><span>Routing</span><span>Aligned with 7‑year itinerary</span></div>
-          </div>
-
-          <hr class="hr" />
-
-          <p class="muted small">
-            Next additions: (1) budget by category, (2) reserve policy, (3) capex schedule, (4) owner usage calendar,
-            (5) governance and exit mechanics.
-          </p>
+        <div class="hr"></div>
+        <div class="kpis">
+          <div class="kpi"><b>7 years</b><span>Sample world itinerary</span></div>
+          <div class="kpi"><b>Oyster 885</b><span>Blue-water platform</span></div>
+          <div class="kpi"><b>Private use</b><span>No charter focus</span></div>
         </div>
-
-        <div class="surface">
-          <h3>Quick split calculator</h3>
-          <p class="muted small">A quick sanity check before we build the full scenario model.</p>
-
-          <form class="calc" id="calc">
-            <label>
-              Annual operating budget (EUR)
-              <input type="number" inputmode="numeric" id="budget" placeholder="e.g. 750000" />
-            </label>
-            <label>
-              Number of owners
-              <input type="number" inputmode="numeric" id="owners" value="5" />
-            </label>
-            <label>
-              Annual reserve (EUR)
-              <input type="number" inputmode="numeric" id="reserve" placeholder="e.g. 150000" />
-            </label>
-
-            <button class="btn" type="submit">Calculate</button>
-
-            <div class="calc-out" aria-live="polite">
-              <div class="spec"><span>Budget per owner</span><span id="out-per">—</span></div>
-              <div class="spec"><span>Budget + reserve per owner</span><span id="out-per2">—</span></div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container split">
-        <div>
-          <h2>Model outline</h2>
-          <p class="muted">
-            When you’re ready, we’ll convert this into a proper, investor-grade projection with scenarios (bear/base/bull),
-            charts and a downloadable spreadsheet.
-          </p>
-        </div>
-
-        <div class="surface">
-          <h3>Sections to include</h3>
-          <ul class="small">
-            <li><strong>Acquisition:</strong> purchase, survey, broker fees, immediate upgrades</li>
-            <li><strong>Annual costs:</strong> crew, insurance, berthing, maintenance, fuel/logistics</li>
-            <li><strong>Capex:</strong> rigging/sails cycles, batteries, paint/teak, electronics refresh</li>
-            <li><strong>Governance:</strong> voting thresholds, budget approvals, usage calendar</li>
-            <li><strong>Exit:</strong> valuation rules, transfer restrictions, buy‑sell clauses</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <p class="small muted">© <span id="year"></span> Guardian Angel</p>
-        <p class="small muted">Financial content is a framework until real numbers are added.</p>
-      </div>
-      <div class="small muted">
-        <a href="index.html">Home</a> • <a href="around-the-world.html">Itinerary</a>
       </div>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <div class="card soft">
+      <div class="pad">
+        <div class="h3">Ownership concept</div>
+        <div class="h2">A simple shared programme</div>
+        <p class="p">
+          Optional structure: 5 equal shares (20% each), with a clear calendar, transparent costs,
+          and a professional crew maintaining the yacht year-round.
+        </p>
+        <div class="hr"></div>
+        <p class="small">
+          Note: This is a project page (work in progress). Numbers and route can be refined.
+        </p>
+        <div style="margin-top:12px">
+          <a class="btn primary" href="ownership.html">See projection</a>
+          <a class="btn" href="itinerary.html">See seasons</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container row">
+    <div>© Guardian Angel (project preview)</div>
+    <div class="small">Yacht specs & photos sourced from the public De Valk listing/brochure.</div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
