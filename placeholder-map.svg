@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <rect width="900" height="900" fill="#ffffff"/>
+  <rect x="70" y="70" width="760" height="760" rx="46" fill="rgba(11,58,74,.04)" stroke="rgba(14,26,34,.14)"/>
+  <path d="M220 590l140-160 120 120 150-180 220 260H220z" fill="rgba(179,139,63,.18)"/>
+  <text x="120" y="780" fill="rgba(14,26,34,.55)" font-size="26" font-family="Inter, Arial">Image placeholder</text>
+</svg>

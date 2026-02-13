@@ -3,16 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Financial Projection | Guardian Angel</title>
-  <meta name="description" content="Financial projection framework for a shared ownership programme (5 owners): acquisition, running costs, capex and reserves." />
+  <title>Around the World | Guardian Angel</title>
+  <meta name="description" content="A 7-year, season-aware itinerary for a private Oyster 885 world programme." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/mark.svg" />
 </head>
 <body>
+  <div class="notice">
+    <div class="container">
+      <span>Draft itinerary • adjust months per permits & logistics</span>
+      <span><a href="index.html">Back to yacht</a></span>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Guardian Angel home">
-        <span class="brand-mark" aria-hidden="true">⟡</span>
         <span class="brand-name">Guardian Angel</span>
         <span class="brand-sub">Oyster 885</span>
       </a>
@@ -24,150 +30,162 @@
 
       <nav id="primary-nav" class="nav" aria-label="Primary">
         <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="around-the-world.html">Around the World</a>
-        <a class="nav-link active" href="financial-projection.html">Financial Projection</a>
+        <a class="nav-link active" href="around-the-world.html">Around the World</a>
+        <a class="nav-link" href="financial-projection.html">Financial Projection</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero hero-slim">
-      <div class="container">
-        <p class="eyebrow">Shared programme framework</p>
-        <h1>Financial Projection</h1>
+    <section class="hero hero-slim" aria-label="Itinerary hero">
+      <div class="hero-media" aria-hidden="true">
+        <img
+          src="assets/route-hero.jpg"
+          alt=""
+          loading="eager"
+          onerror="this.onerror=null;this.src='assets/placeholder-hero.svg';"
+        />
+      </div>
+
+      <div class="container hero-content">
+        <p class="eyebrow">7-year circumnavigation concept</p>
+        <h1>Around the World</h1>
         <p class="lead">
-          A clean structure you can populate later with your real numbers:
-          acquisition, annual running costs, refit cycles, reserves, and owner participation.
+          A season-aware route designed to reduce exposure to hurricane and cyclone seasons while still
+          spending the best months in the best cruising grounds.
         </p>
+
+        <div class="pills" role="list" aria-label="Season notes">
+          <span class="pill" role="listitem">Mediterranean: May–Oct</span>
+          <span class="pill" role="listitem">Atlantic hurricanes: Jun–Nov</span>
+          <span class="pill" role="listitem">South Pacific cyclones: Nov–Apr</span>
+          <span class="pill" role="listitem">Australia cyclones: Nov–Apr</span>
+          <span class="pill" role="listitem">SW Indian Ocean cyclones: mid‑Nov–Apr</span>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container grid-2">
-        <div class="card">
-          <h2 class="card-title">Assumptions (edit later)</h2>
-          <ul class="small">
-            <li><strong>Owners:</strong> 5</li>
-            <li><strong>Use:</strong> Private programme (not chartered)</li>
-            <li><strong>Quality target:</strong> immaculate condition year‑round</li>
-            <li><strong>Routing:</strong> aligned with 7‑year itinerary</li>
-          </ul>
-
-          <div class="note">
-            <strong>Next step:</strong> Add a detailed cost model (crew, insurance, berthage, maintenance,
-            fuel, flights, compliance, communications, spares, capex).
-          </div>
-        </div>
-
-        <div class="card">
-          <h2 class="card-title">Quick split calculator</h2>
-          <p class="muted small">
-            This helps you sanity‑check how an annual budget looks per owner before building the full model.
+      <div class="container split">
+        <div>
+          <h2>Route overview</h2>
+          <p class="muted">
+            This is a “good‑weather‑first” concept. The idea: cross oceans during established windows,
+            and spend core cyclone season outside the tropics (e.g., New Zealand / southern Australia).
           </p>
 
-          <form class="calc" id="calc">
-            <label>
-              Annual operating budget (EUR)
-              <input type="number" inputmode="numeric" id="budget" placeholder="e.g. 750000" />
-            </label>
-            <label>
-              Number of owners
-              <input type="number" inputmode="numeric" id="owners" value="5" />
-            </label>
-            <label>
-              Annual reserve (EUR)
-              <input type="number" inputmode="numeric" id="reserve" placeholder="e.g. 150000" />
-            </label>
-
-            <button class="btn" type="submit">Calculate</button>
-
-            <div class="calc-out" aria-live="polite">
-              <div class="spec"><span>Budget per owner</span><span id="out-per">—</span></div>
-              <div class="spec"><span>Budget + reserve per owner</span><span id="out-per2">—</span></div>
+          <div class="years" aria-label="Years">
+            <div class="year-card">
+              <div class="y">Year 1</div>
+              <strong>Mediterranean test summer</strong>
+              <ul>
+                <li>May–Oct: Balearics → Corsica/Sardinia → Italy → Greece</li>
+                <li>Nov–Mar: winter refit in Europe</li>
+              </ul>
             </div>
-          </form>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Model outline</h2>
-          <p class="muted">Suggested sections to build a proper investor-grade projection.</p>
+            <div class="year-card">
+              <div class="y">Year 2</div>
+              <strong>Med + Atlantic + Caribbean</strong>
+              <ul>
+                <li>Apr–Oct: Mediterranean (longer legs, training)</li>
+                <li>Nov–Apr: Atlantic crossing → Caribbean season</li>
+              </ul>
+            </div>
+
+            <div class="year-card">
+              <div class="y">Year 3</div>
+              <strong>Panama + Galápagos + South Pacific</strong>
+              <ul>
+                <li>Mar–May: Panama Canal + Galápagos (optional) → Marquesas</li>
+                <li>May–Oct: French Polynesia / Cooks / Tonga</li>
+                <li>Nov–Mar: cyclone avoidance in NZ</li>
+              </ul>
+            </div>
+
+            <div class="year-card">
+              <div class="y">Year 4</div>
+              <strong>Australia + Indonesia + SE Asia</strong>
+              <ul>
+                <li>Apr–Oct: Coral Sea / GBR</li>
+                <li>Oct–Mar: Indonesia → Thailand/Malaysia base</li>
+              </ul>
+            </div>
+
+            <div class="year-card">
+              <div class="y">Year 5</div>
+              <strong>Indian Ocean + South Africa</strong>
+              <ul>
+                <li>May–Sep: Maldives / Seychelles / Mauritius (route-dependent)</li>
+                <li>Oct–Mar: South Africa summer + maintenance</li>
+              </ul>
+            </div>
+
+            <div class="year-card">
+              <div class="y">Year 6</div>
+              <strong>South Atlantic + Europe</strong>
+              <ul>
+                <li>Nov–Feb: Cape Town → Brazil (via islands)</li>
+                <li>May–Aug: Azores → Europe summer arrival</li>
+              </ul>
+            </div>
+
+            <div class="year-card">
+              <div class="y">Year 7</div>
+              <strong>Mediterranean completion</strong>
+              <ul>
+                <li>May–Oct: Med grand tour (Italy → Greece → Turkey)</li>
+                <li>Optional: North Atlantic summer (UK/Ireland/Norway)</li>
+              </ul>
+            </div>
+
+            <div class="year-card">
+              <div class="y">Map</div>
+              <strong>Route map</strong>
+              <p class="muted small">Replace <code>assets/route-map.jpg</code> when ready.</p>
+              <div class="surface" style="padding: 10px; box-shadow:none;">
+                <img
+                  src="assets/route-map.jpg"
+                  alt="World route map placeholder"
+                  loading="lazy"
+                  onerror="this.onerror=null;this.src='assets/placeholder-map.svg';"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="outline">
-          <div class="outline-item">
-            <h3>1) Acquisition</h3>
-            <ul class="small">
-              <li>Purchase price, taxes/fees, broker fees</li>
-              <li>Survey + immediate rectification budget</li>
-              <li>Initial safety kit + spares + upgrades</li>
-            </ul>
-          </div>
-          <div class="outline-item">
-            <h3>2) Annual operating costs</h3>
-            <ul class="small">
-              <li>Crew payroll + rotation + travel</li>
-              <li>Insurance (hull, P&amp;I), compliance</li>
-              <li>Maintenance &amp; consumables</li>
-              <li>Berthing / marina / yard</li>
-              <li>Fuel, water, communications</li>
-            </ul>
-          </div>
-          <div class="outline-item">
-            <h3>3) Capex &amp; refit cycles</h3>
-            <ul class="small">
-              <li>Rigging cycles, sails, engine major service</li>
-              <li>Electronics refresh, batteries, generator</li>
-              <li>Paint, teak, interior</li>
-            </ul>
-          </div>
-          <div class="outline-item">
-            <h3>4) Governance &amp; owner programme</h3>
-            <ul class="small">
-              <li>Usage calendar: weeks per owner, guest rules</li>
-              <li>Decision-making: capex thresholds, voting</li>
-              <li>Exit / buy-sell clauses, valuation mechanism</li>
-            </ul>
-          </div>
-        </div>
+        <aside class="surface" aria-label="Notes">
+          <h3>Notes</h3>
+          <p class="muted small">
+            The exact months will depend on permits, insurance zones, crew availability, and your preference for
+            remote vs “infrastructure” bases.
+          </p>
 
-        <div class="table-wrap">
-          <h3>Placeholder table (fill later)</h3>
-          <table class="tbl">
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Annual (EUR)</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Crew</td><td>—</td><td>Captain + crew structure</td></tr>
-              <tr><td>Insurance</td><td>—</td><td>Hull + liability</td></tr>
-              <tr><td>Maintenance</td><td>—</td><td>Parts + yard time</td></tr>
-              <tr><td>Berthing &amp; storage</td><td>—</td><td>By region</td></tr>
-              <tr><td>Fuel &amp; logistics</td><td>—</td><td>Passage dependent</td></tr>
-              <tr><td>Reserve (capex)</td><td>—</td><td>Long-term upkeep</td></tr>
-              <tr><td><strong>Total</strong></td><td><strong>—</strong></td><td></td></tr>
-            </tbody>
-          </table>
-        </div>
+          <hr class="hr" />
 
-        <div class="note">
-          <strong>When you’re ready:</strong> I can turn this into a proper model page with charts,
-          scenario toggles (bear/base/bull), and downloadable PDFs.
-        </div>
+          <p class="small"><strong>Immediate next step:</strong> confirm Year 2 logistics (Med exit port, Atlantic staging, Caribbean base).</p>
+          <p class="small muted">If you want, we can add a printable “one-page route” PDF link here.</p>
+
+          <hr class="hr" />
+
+          <p class="small muted">
+            Tip: keep a “weather avoidance” buffer in every year. It removes pressure and makes the programme feel easy.
+          </p>
+        </aside>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p class="small muted">© <span id="year"></span> Guardian Angel. All rights reserved.</p>
-      <p class="small muted">Financial content is a draft framework until real numbers are added.</p>
+      <div>
+        <p class="small muted">© <span id="year"></span> Guardian Angel</p>
+        <p class="small muted">Draft itinerary — refine with real dates, permits and logistics.</p>
+      </div>
+      <div class="small muted">
+        <a href="index.html">Home</a> • <a href="financial-projection.html">Financial</a>
+      </div>
     </div>
   </footer>
 
