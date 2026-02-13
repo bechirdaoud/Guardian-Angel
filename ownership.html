@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ownership — Guardian Angel</title>
+  <meta name="description" content="A simple shared ownership concept and financial projection." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="Guardian Angel" onerror="this.style.display='none'">
+      <span class="tag">Oyster 885</span>
+    </a>
+    <nav class="menu">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="yacht.html">Yacht</a>
+      <a data-nav href="itinerary.html">Itinerary</a>
+      <a data-nav href="ownership.html">Ownership</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="media" style="background-image:url('https://www.devalk.nl/images/thumbnails/website/oyster-885-806067_684aeaefa7341c.jpg');"></div>
+  <div class="container inner">
+    <div class="kicker">Ownership</div>
+    <h1 class="h1">Shared programme (5 owners)</h1>
+    <p class="lede">
+      A simple structure: clear capitalisation, clear annual budget, and transparent usage rules.
+      Adjust the numbers below to fit your final plan.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid">
+    <div class="card">
+      <div class="pad">
+        <div class="h3">Inputs (editable)</div>
+        <div class="formrow">
+          <div>
+            <label class="small">Number of owners</label>
+            <input class="input" id="owners" type="number" min="2" max="12" value="5" />
+          </div>
+          <div>
+            <label class="small">Acquisition (incl. broker) — €</label>
+            <input class="input" id="acq" type="number" step="1000" value="1955000" />
+          </div>
+          <div>
+            <label class="small">Immediate works / refit — €</label>
+            <input class="input" id="immediate" type="number" step="1000" value="550000" />
+          </div>
+          <div>
+            <label class="small">Contingency — €</label>
+            <input class="input" id="cont" type="number" step="1000" value="0" />
+          </div>
+          <div>
+            <label class="small">Annual running budget — € / year</label>
+            <input class="input" id="annual" type="number" step="1000" value="420000" />
+          </div>
+        </div>
+
+        <div class="hr"></div>
+        <div id="out"></div>
+
+        <div class="hr"></div>
+        <div class="h3">What the annual budget covers (example)</div>
+        <table class="table">
+          <tr><th>Crew</th><td>€150k–€200k (example assumption)</td></tr>
+          <tr><th>General</th><td>€30k–€50k (insurance, berthing, fuel, consumables)</td></tr>
+          <tr><th>Maintenance</th><td>Regular €75k–€100k + big items €75k–€100k</td></tr>
+          <tr><th>Provision / logistics</th><td>€20k–€40k (baseline; owner trips can be charged per use)</td></tr>
+        </table>
+
+        <p class="note">
+          These figures are a starting point for discussion and should be refined with real quotations, cruising plan, and crew structure.
+        </p>
+      </div>
+    </div>
+
+    <div class="card soft">
+      <div class="pad">
+        <div class="h3">Usage principles</div>
+        <div class="h2">Clear calendar, fair allocation</div>
+        <p class="p">
+          Example: 5 shares (20% each). Each share receives a minimum of 4 prime weeks per year,
+          plus additional weeks subject to availability.
+        </p>
+        <div class="hr"></div>
+        <div class="h3">Onboard costs</div>
+        <p class="p">
+          While an owner is onboard, trip-specific provisioning (food, guest services, special requests) can be charged
+          directly to that owner to keep the shared annual budget predictable.
+        </p>
+        <div class="hr"></div>
+        <div class="h3">Booking idea</div>
+        <p class="p">
+          “Tambola” style draw: a random order is generated for owners to pick first blocks.
+          The previous winner moves last next round to keep the system fair.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container row">
+    <div>© Guardian Angel (project preview)</div>
+    <div class="small">Edit the numbers and rules as your programme becomes final.</div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
